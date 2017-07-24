@@ -1,0 +1,10 @@
+.ant-checkbox-group-item{
+    margin-top: 8px!important;
+    margin-right: 8px!important;
+    margin-bottom: 8px!important;
+    font-size: 1.75rem!important;
+}
+
+.ant-checkbox{
+    vertical-align: middle;
+}

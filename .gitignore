@@ -1,0 +1,4 @@
+*.txt
+bundle.js
+node_modules/*
+webpack.config.js

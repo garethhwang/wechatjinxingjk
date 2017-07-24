@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/json; charset=utf-8"/>
+    <meta http-equiv="Content-Encoding" content="gzip"/>
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" href="./app/css/index.css?v=0.08">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script>
+        InitPage();
+        function InitPage() {
+            var fontSize=window.innerWidth / 750 * 100 + "%";
+            document.getElementsByTagName("html")[0].style.fontSize=fontSize;
+        }
+    </script>
+</head>
+
+<body onresize="InitPage();">
+<link rel="stylesheet" href="./app/css/ant.css?v=0.08">
+<link rel="stylesheet" href="./app/css/ant-web.css?v=0.02">
+<script>
+    var fullurl = window.location.href;
+    console.log("full url is : " + fullurl);
+    var codeIndex = fullurl.indexOf("/?code=");
+    if( codeIndex != -1 ) {
+        var routerIndex = fullurl.indexOf("#", codeIndex);
+        if( routerIndex != -1 ) {
+            var router = fullurl.substr(routerIndex);
+			var wechatinfo = fullurl.substr(codeIndex+1, routerIndex-codeIndex-1);
+			var baseurl = fullurl.substr(0, codeIndex);
+			var newurl = baseurl + router + wechatinfo;
+            console.log("new url is : " + newurl);
+            location.href = newurl;
+        }
+    }
+
+    var responsetypeIndex = fullurl.indexOf("/?response_type=");
+    if( responsetypeIndex != -1 ) {
+        var routerIndex = fullurl.indexOf("#", responsetypeIndex);
+        if( routerIndex != -1 ) {
+            var router = fullurl.substr(routerIndex);
+			var wechatinfo = fullurl.substr(responsetypeIndex+1, routerIndex-responsetypeIndex-1);
+			var baseurl = fullurl.substr(0, responsetypeIndex);
+			var newurl = baseurl + router + wechatinfo;
+            console.log("new url is : " + newurl);
+            location.href = newurl;
+        }
+    }
+</script>
+<div id="app"></div>
+<script src="bundle.js?v=0.43"></script>
+</body>
+</html>
+
+
