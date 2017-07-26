@@ -57,8 +57,8 @@ export default React.createClass({
                 if (data.code == 0) {
                     sessionStorage.jxsession = data.data.jxsession;
 
-                    if(data.data.edit == 1){
-                        this.context.router.push("/bindinginfo");
+                    if(data.data.edit == 0){
+                        this.context.router.push("/registersuccess");
                     }else {
                         history.back();
                     }
