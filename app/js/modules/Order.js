@@ -200,13 +200,13 @@ export default React.createClass({
                     product_id:this.props.params.id,
                     name: data.data.name,
                     price: data.data.price,
-                    realname: data.data.realname,
+                    //realname: data.data.realname,
                     telephone: data.data.telephone,
                     productCount: 1,
                     countPrice: data.data.price,
                     city:data.data.city,
                     districtid:data.data.districtid.split(','),
-                    address_1:data.data.address_1,
+                    //address_1:data.data.address_1,
                     service_tel: data.data.service_tel,
                     options:data.data.pcd_data,
                     couponall:data.data.couponall,
@@ -328,7 +328,7 @@ export default React.createClass({
                 </div>
                 <div>
                     <span className="order_detail">联系人</span>
-                    <input type="text" name="realname" className="order_detail_input" value={this.state.realname} onChange={this.handleChange}/>
+                    <input type="text" name="realname" className="order_detail_input"  onChange={this.handleChange}/>
                 </div>
                 <div>
                     <span className="order_detail">联系电话</span>
@@ -337,10 +337,10 @@ export default React.createClass({
                 <table width="98%">
                     <tbody>
                     <tr>
-                        <td width="15%">
+                        <td width="25%">
                             <span className="order_detail_font">地址</span>
                         </td>
-                        <td width="35%">
+                        <td>
                             <Picker
                                 data={this.state.options}
                                 title="地址"
@@ -349,13 +349,13 @@ export default React.createClass({
                                 <input id="district"  type="text" readOnly="true"  className="formcontroller"></input>
                             </Picker>
                         </td>
-                        <td>
-                            <input type="text" name="address_1"  width="100%" placeholder="详细地址" className="order_detail_input order_detail_input_addressDetail"
-                                   value={this.state.address_1} onChange={this.handleChange}/>
-                        </td>
                     </tr>
                     </tbody>
                 </table>
+                <div>
+                    <input type="text" name="address_1"  width="100%" placeholder="详细地址" className="order_detail_input order_detail_input_addressDetail"
+                           onChange={this.handleChange}/>
+                </div>
                 <div>
                     {(() => {
                         if (this.state.service_timer != 0) {
