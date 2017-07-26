@@ -354,7 +354,7 @@ export default React.createClass({
                 </table>
                 <div>
                     <span className="order_detail">详细地址</span>
-                    <input type="text" name="address_1"  className="order_detail_input order_detail_input_addressDetail"  onChange={this.handleChange}/>
+                    <input type="text" name="address_1"  className="order_detail_input"  onChange={this.handleChange}/>
                 </div>
                 <div>
                     {(() => {
