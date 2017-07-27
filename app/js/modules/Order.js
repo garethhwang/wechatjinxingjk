@@ -338,7 +338,7 @@ export default React.createClass({
                     <tbody>
                     <tr>
                         <td width="25%">
-                            <span className="order_detail_font">地址</span>
+                            <span className="order_detail_font">服务区域</span>
                         </td>
                         <td>
                             <Picker
