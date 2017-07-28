@@ -22,7 +22,7 @@ export default React.createClass({
                 if (data.data.orders.length != 0) {
                     orderlist = data.data.orders.map(function (order, index) {
                         return (
-                            <OrderItem key={index} type="5" order_id={order.order_id} shipping_city={order.shipping_city}
+                            <OrderItem key={index} type="15" order_id={order.order_id} shipping_city={order.shipping_city}
                                        shipping_address_1={order.shipping_address_1}
                                        shipping_date={order.shipping_date} totals={order.total}
                                        products={order.products} service_tel={data.data.service_tel}/>
