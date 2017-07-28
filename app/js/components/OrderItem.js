@@ -67,6 +67,35 @@ var OrderItem = React.createClass({
                 );
                 break;
             case 5:
+                item = (
+                    <div className="orderList">
+                        <table className="maintable" data-num={this.props.order_id}>
+                            <tbody>
+                            <tr>
+                                <td width="25%" className="left">地址：</td>
+                                <td width="50%" className="collRight">{this.props.shipping_city + this.props.shipping_address_1}</td>
+                            </tr>
+                            <tr>
+                                <td>时间：</td>
+                                <td>{this.props.shipping_date}</td>
+                                <td className="listMoney thirdRight">
+                                    ￥{this.props.totals}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>商品：</td>
+                                <td>
+                                    {productList}
+                                </td>
+                                <td className="thirdRight">
+                                    <span className="listPaybtn" datanum={this.props.order_id} >已完成</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                );
+                break;
             case 15:
                 item = (
                     <div className="orderList" onClick={this.contact}>
